@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(248, 234, 248);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+.textlef {  
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+}
+
+.top-bar {
+    background-color: #d7bb62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.social-media span {
+    margin-right: 5px;
+}
+
+.social-icon i {
+    margin-right: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+.top-links {
+    display: flex;
+    gap: 80px;
+}
+
+.navbar {
+    background-color: #7f42a5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    color: aliceblue;
+}
+
+.Logo {
+    font-size: 24px;
+    font-weight: 900px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    font-weight: bold;
+    justify-content: center;  /* Teks rata tengah (Kiri-Kanan) */
+    align-items: center;      /* Teks rata tengah (Atas-Bawah) */
+}
+
+.nav-links li {
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.nav-links li:hover {
+    color: #d7bb62;
+}
+
+/* --- SEARCH BOX STYLING --- */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white; /* Latar putih agar bersih */
+    border-radius: 20px;
+    padding: 5px;
+    transition: 0.4s;
+}
+
+/* Input text (awalnya sembunyi/kecil) */
+.search-box input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 0; /* Lebar 0 supaya tersembunyi */
+    padding: 0;
+    transition: 0.4s;
+    font-size: 14px;
+}
+
+/* Tombol Kaca Pembesar */
+.search-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #7f42a5; /* Warna Ungu Sekolah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #d7bb62; /* Berubah Emas saat disentuh */
+    color: #5a256e;
+}
+
+/* Class 'active' (Akan ditambahkan oleh JS saat diklik) */
+.search-box.active input {
+    width: 150px; /* Input melebar */
+    padding: 0 10px;
+}
+
+/* WARNA STABILO (HIGHLIGHT) */
+.highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 0 0 5px yellow;
+}
+
+.dello {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    background-image: url(gambar/image123.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.dello-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.dello h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #fff6e9;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px ;
+}
+
+.dello p {
+    font-size: 18px;
+    color: #dbd1c3;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+
+}
+
+/* 1. Kotak Pembungkus Dropdown (Background Ungu) */
+.dropdown-menu {
+    background-color: #7f42a5; /* Ungu Fantasi */
+    border: 2px solid #d7bb62; /* Garis tepi Emas */
+    border-radius: 10px;       /* Sudut melengkung */
+    padding: 10px 0;           /* Jarak atas bawah di dalam kotak */
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3); /* Bayangan agar terlihat melayang */
+}
+
+/* 2. Item List (Teks Menu) */
+.dropdown-item {
+    color: white !important;   /* Teks Putih (pakai !important untuk menimpa gaya bawaan Bootstrap) */
+    font-weight: 500;
+    transition: all 0.3s ease; /* Efek transisi halus saat disentuh */
+}
+
+/* 3. Efek Hover (Saat Kursor Mengarah ke Item) */
+.dropdown-item:hover {
+    background-color: #d7bb62; /* Background berubah Emas */
+    color: #5a256e !important; /* Teks berubah jadi Ungu Gelap */
+    padding-left: 20px;        /* Efek geser sedikit ke kanan */
+}
+
+/* 4. Garis Pemisah (Divider) di atas 'Semua info Eskul' */
+.dropdown-divider {
+    border-top: 1px solid rgba(215, 187, 98, 0.5); /* Garis emas tipis transparan */
+}
+
+.button {
+    display: flex;
+    
+    /* 1. Berikan lebar pembungkusnya dulu (misalnya 80% dari layar atau 500px) */
+    width: 325px; 
+    
+    /* 2. Gunakan ini agar mereka saling menjauh ke ujung */
+    justify-content: space-between; 
+    
+    /* Hapus 'gap' atau biarkan saja (tidak berpengaruh jika pakai space-between) */
+}
+
+.btn {
+    /* Tambahan agar tag <a> bisa punya tinggi & lebar */
+    display: inline-flex;     /* Agar kotak tombolnya rapi */
+    justify-content: center;  /* Teks rata tengah (Kiri-Kanan) */
+    align-items: center;      /* Teks rata tengah (Atas-Bawah) */
+    text-decoration: none;    /* Hilangkan garis bawah link */
+    
+    /* Kode lama Anda (tetap dipakai) */
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+/* Pastikan warna teksnya benar */
+.btn-gold {
+    background-color: #d7bb62;
+    color: #5a256e; /* Teks hitam */
+    border: 2px solid #7f42a5;
+}
+
+.btn-purple {
+    background-color: #7f42a5;
+    color: gold; /* Teks putih */
+    border: 2px solid gold;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-gold:hover {
+    background-color: #7f42a5;
+    color: #d7bb62;
+}
+
+.btn-purple:hover {
+    background-color: #d7bb62;
+    color: #5a256e;
+}
+
+
+.btn-gold {
+    background-color: #d7bb62;
+}
+
+.btn-purple {
+    background-color: #7f42a5;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: aliceblue;
+    opacity: 0.5;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: 20px;
+}
+
+.footer-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #e7b925;
+    text-shadow: black;
+}
+
+.footer-center {
+    background-color: #5a256e;
+    text-align: center;
+    padding: 12px;
+    font-size: 30px;
+    border: 2px solid rgba(146, 15, 115, 0.2);
+}
+
+.footer-bottom {
+    background-color: #d7bb62;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container-fluid {
+    text-align: center;
+    
+}
+
+.card {
+    background-color: #8c5d9d;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(255, 166, 41, 0.299);
+}
+
+.card-text {
+    color: aliceblue;
+}
+
+.card-title {
+    color: aliceblue;
+}
+
+.fasilitas {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    color: #e7b925;
+    text-shadow: 1px 2px 3px #5a256e;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgb(225, 184, 18);
+
+}
+
+
+.carousel-inner h5 {
+    color: rgb(44, 0, 49);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.67);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+   
+    
+}
+
+
+.carousel-inner p {
+    color: rgb(44, 0, 49);
+    text-shadow: 0.2px 0.2px 2px rgba(231, 231, 231, 0.684);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+
+.button-center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-warning {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --- RESPONSIVE (Untuk layar kecil) --- */
+@media (max-width: 768px) {
+    .top-bar, .nav-links {
+        display: none; /* Sederhanakan untuk demo */
+    }
+    .navbar {
+        justify-content: center;
+    }
+    .dello {
+        padding: 0 30px;
+        text-align: center;
+    }
+    .dello h1 {
+                font-size: 40px;
+            }
+    .buttons {
+        justify-content: center;
+    }
+}

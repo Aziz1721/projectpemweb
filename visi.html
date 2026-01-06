@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy School Extracurricular</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS SAMA PERSIS SEPERTI SEBELUMNYA --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #f0f0f0; 
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 960px;
+            height: 540px;
+            background-color: #eee;
+            background-image: linear-gradient(#e5e5e5 1px, transparent 1px), linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+            background-size: 20px 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            user-select: none;
+        }
+        h1.title {
+            font-family: 'Fredoka', sans-serif;
+            color: #eec84b;
+            font-size: 48px;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            margin-top: -30px;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.05);
+        }
+        .carousel-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 25px;
+        }
+        .nav-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            padding: 10px;
+            transition: transform 0.1s;
+            z-index: 2;
+        }
+        .nav-btn:active { transform: scale(0.9); }
+        .arrow-shape {
+            width: 0; height: 0; 
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+        .arrow-left .arrow-shape { border-right: 25px solid #bea248; }
+        .arrow-right .arrow-shape { border-left: 25px solid #bea248; }
+        .cards-container { display: flex; gap: 30px; }
+        
+        /* DESAIN KARTU */
+        .card {
+            background-color: #6a67ce;
+            width: 220px;
+            height: 170px;
+            padding: 0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 7% 100%);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .card:hover {
+            background-color: #7b78d6;
+            transform: translateY(-5px);
+        }
+        .card-img {
+            width: 100%;
+            height: 125px;
+            object-fit: cover;
+            object-position: center top;
+            background-color: #ddd;
+        }
+        .card h3 {
+            color: white;
+            font-size: 14px;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 12px;
+            padding: 0 10px;
+            line-height: 1.2;
+        }
+        .footer-text {
+            font-family: 'Fredoka', sans-serif;
+            color: #eec84b;
+            font-size: 20px;
+            margin-top: 50px;
+            letter-spacing: 1px;
+        }
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        <h1 class="title">Ekstrakurikuler</h1>
+
+        <div class="carousel-wrapper">
+            <button class="nav-btn arrow-left" onclick="moveLeft()">
+                <div class="arrow-shape"></div>
+            </button>
+
+            <div class="cards-container" id="cardContainer">
+                </div>
+
+            <button class="nav-btn arrow-right" onclick="moveRight()">
+                <div class="arrow-shape"></div>
+            </button>
+        </div>
+
+        <div class="footer-text">&lt;&lt;&lt; Fantasy School &gt;&gt;&gt;</div>
+    </div>
+
+    <script>
+        // --- BAGIAN INI YANG HARUS KAMU UBAH ---
+        
+        const eskulData = [
+            {
+                name: "Basket Fantasy School",
+                // Ganti 'basket.jpg' dengan nama file foto basket kamu
+                imgSrc: "image1.jpg" 
+            },
+            {
+                name: "Pramuka Fantasy School",
+                // Ganti dengan nama file foto pramuka
+                imgSrc: "pramuka.jpg"
+            },
+            {
+                name: "PMR Fantasy School",
+                // Ganti dengan nama file foto PMR
+                imgSrc: "pmr.jpg"
+            },
+            {
+                name: "Futsal Fantasy School",
+                // Ganti dengan nama file foto futsal
+                imgSrc: "futsal.jpg"
+            },
+            {
+                name: "Musik Fantasy School",
+                // Ganti dengan nama file foto musik
+                imgSrc: "musik.jpg"
+            }
+        ];
+
+        // --- JANGAN UBAH CODE DI BAWAH INI (LOGIKA PROGRAM) ---
+
+        let startIndex = 0; 
+        const cardsToShow = 3;
+        const container = document.getElementById('cardContainer');
+
+        function renderCards() {
+            container.innerHTML = '';
+            for (let i = 0; i < cardsToShow; i++) {
+                let dataIndex = (startIndex + i) % eskulData.length;
+                if (dataIndex < 0) dataIndex = eskulData.length + dataIndex;
+                const item = eskulData[dataIndex];
+
+                // Jika file gambar tidak ditemukan, pakai placeholder sementara agar tidak error tampilannya
+                const imagePath = item.imgSrc ? item.imgSrc : "https://via.placeholder.com/220x125?text=No+Image";
+
+                const cardHTML = `
+                    <div class="card fade-in">
+                        <img src="${imagePath}" alt="${item.name}" class="card-img" onerror="this.src='https://via.placeholder.com/220x125?text=Foto+Hilang'">
+                        <h3>${item.name}</h3>
+                    </div>
+                `;
+                container.innerHTML += cardHTML;
+            }
+        }
+
+        function moveRight() {
+            startIndex = (startIndex + 1) % eskulData.length;
+            renderCards();
+        }
+
+        function moveLeft() {
+            startIndex = (startIndex - 1 + eskulData.length) % eskulData.length;
+            renderCards();
+        }
+
+        // Jalankan saat pertama kali dibuka
+        renderCards();
+
+    </script>
+</body>
+</html>

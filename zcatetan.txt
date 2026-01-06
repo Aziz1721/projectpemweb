@@ -1,0 +1,171 @@
+home (Aziz)
+about (kayla)
+contact (Patin )
+fasilitas (Akmal)
+profile (Patin)
+visi misi (qila)
+Lokasi (Aziz)
+ekskul (qila)
+Prestasi (Akmal)
+profile devlop (kayla)
+
+warna:
+FFF2C6
+FFF8DE
+AAC4F5
+8CA9FF
+
+Credit:
+Ibispaint (gambar mentahan)
+gemini (prompt gambar)
+pinterst
+
+ekskul:
+Paskib
+Basket
+Badminton
+Tenis
+Golf
+Club Seni
+PMR
+Pramuka
+Band Musik
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANTASY SCHOOL</title>
+    <link rel="icon" type="image/png" href="gambar/logoFS.png">
+    <link rel="apple-touch-icon" href="gambar/LogoF.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+
+
+</head>
+<body>
+    
+    <div class="top-bar">
+        <div class="social-media">
+            <span class="textlef"> follow our media social : </span>
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                &nbsp;
+                <i class="fab fa-instagram"></i>
+                &nbsp;
+                <i class="fab fa-whatsapp"></i>
+                &nbsp;
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="top-links">
+            <a href="#">FS LangitKikatoti</a>
+            <a href="#">FS AirDalamiti</a>
+            <a href="#">FS Secviro</a>
+            <a href="#">FS Vrigoen</a> 
+            <a href="#">FS Werfing</a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="Logo">FantasySchool</div>
+        <ul class="nav-links">
+            <li><a href="visimisi.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="#">Lokasi</a></li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Eskul
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Paskibra</a></li>
+                <li><a class="dropdown-item" href="#">Basket</a></li>
+                <li><a class="dropdown-item" href="#">Badminton</a></li>
+                <li><a class="dropdown-item" href="#">Tenis</a></li>
+                <li><a class="dropdown-item" href="#">Golf</a></li>
+                <li><a class="dropdown-item" href="#">Club Seni</a></li>
+                <li><a class="dropdown-item" href="#">PMR</a></li>
+                <li><a class="dropdown-item" href="#">Pramuka</a></li>
+                <li><a class="dropdown-item" href="#">Band Musik</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Semua info Eskul</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Prestasi</a></li>
+            <div class="search-icon">
+            <i class="fas fa-search"></i>
+        </div>
+        </ul>
+        
+    </nav>
+
+   
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+    <div class="container">
+        <div class="left-panel">
+            <h1 class="main-title">Visi dan<br>Misi</h1>
+
+            <h2 class="visi-label">Visi</h2>
+
+            <P class="visi-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, possimus incidunt consectetur enim officiis ducimus temporibus aliquam autem mollitia est rem aut? Quam consectetur porro sint nesciunt repudiandae impedit quae.
+            </P>
+        </div>
+            
+
+        <div class="right-panel">
+            <h2 class="misi-label">Misi</h2>
+
+            <div class="mission-list">
+                <div class="mission-item">
+                    <div class="number-circle">1</div>
+                    <div class="mission-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga excepturi consequatur, ut, tempore quia enim nulla nam saepe illo mollitia quidem placeat voluptates soluta aliquam velit non fugit expedita.
+                    </div>
+                </div>
+                
+                <div class="mission-item">
+                    <div class="number-circle">2</div>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad blanditiis in atque dolorum itaque sit assumenda dicta harum accusamus neque ex unde nobis, fuga quidem illum aperiam nam tempora. Sunt.
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="number-circle">3</div>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad blanditiis in atque dolorum itaque sit assumenda dicta harum accusamus neque ex unde nobis, fuga quidem illum aperiam nam tempora. Sunt.
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="number-circle">4</div>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad blanditiis in atque dolorum itaque sit assumenda dicta harum accusamus neque ex unde nobis, fuga quidem illum aperiam nam tempora. Sunt.
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="number-circle">5</div>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad blanditiis in atque dolorum itaque sit assumenda dicta harum accusamus neque ex unde nobis, fuga quidem illum aperiam nam tempora. Sunt.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>

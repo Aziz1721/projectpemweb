@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi dan Misi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset CSS dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF5E8; /* Warna background cream muda */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #1a1a1a;
+        }
+
+        /* Container Utama */
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            width: 100%;
+            gap: 50px; /* Jarak antara kotak biru dan teks misi */
+        }
+
+        /* Bagian Kiri (Kotak Biru) */
+        .left-panel {
+            background-color: #6C7D93; /* Warna biru keabu-abuan */
+            color: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            flex: 0 0 35%; /* Lebar sekitar 35% */
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .main-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 60px;
+        }
+
+        .visi-label {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .visi-text {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Bagian Kanan (List Misi) */
+        .right-panel {
+            flex: 1; /* Mengambil sisa ruang */
+            padding-top: 20px;
+        }
+
+        .misi-label {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: #000;
+        }
+
+        .mission-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* Jarak antar poin misi */
+        }
+
+        .mission-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .number-circle {
+            min-width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1.5px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            background-color: transparent;
+            flex-shrink: 0; /* Agar lingkaran tidak gepeng */
+        }
+
+        .mission-text {
+            font-size: 18px;
+            line-height: 1.5;
+            padding-top: 8px; /* Menyelaraskan teks dengan lingkaran */
+            color: #1a1a1a;
+        }
+
+        /* Responsiveness untuk layar HP */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .left-panel {
+                width: 100%;
+                flex: none;
+            }
+            .main-title {
+                font-size: 36px;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-panel">
+            <h1 class="main-title">Visi dan<br>Misi</h1>
+            
+            <h2 class="visi-label">Visi</h2>
+            
+            <p class="visi-text">
+                Mewujudkan Sekolah yang unggul dalam prestasi, berkarakter, berakhlak mulia, serta mampu menghasilkan peserta didik yang cerdas, mandiri, dan berdaya saing di tingkat nasional maupun global.
+            </p>
+        </div>
+
+        <div class="right-panel">
+            <h2 class="misi-label">Misi</h2>
+
+            <div class="mission-list">
+                <div class="mission-item">
+                    <div class="number-circle">1</div>
+                    <div class="mission-text">
+                        Menyelenggarakan pendidikan yang berkualitas untuk mengembangkan potensi akademik dan non-akademik peserta didik.
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="number-circle">2</div>
+                    <div class="mission-text">
+                        Menanamkan nilai-nilai karakter, disiplin, tanggung jawab, dan akhlak mulia dalam kehidupan sehari-hari.
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="number-circle">3</div>
+                    <div class="mission-text">
+                        Menciptakan lingkungan belajar yang aman, nyaman, dan kondusif bagi perkembangan peserta didik.
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="number-circle">4</div>
+                    <div class="mission-text">
+                        Mengembangkan keterampilan seperti berpikir kritis, kreatif, komunikatif, dan kolaboratif.
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="number-circle">5</div>
+                    <div class="mission-text">
+                        Menjalin kerja sama yang baik antara sekolah, orang tua, dan masyarakat.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
